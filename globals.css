@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #0b4fb3;
+  --brand-dark: #083d8c;
+}
+
+@layer components {
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .btn-danger,
+  .btn-success {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-[#0b4fb3] text-white hover:bg-[#083d8c];
+  }
+  .btn-outline {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+  .btn-success {
+    @apply bg-emerald-600 text-white hover:bg-emerald-700;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#0b4fb3] focus:ring-2 focus:ring-[#0b4fb3]/20;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+  }
+  .table {
+    @apply w-full text-left text-sm;
+  }
+  .table th {
+    @apply border-b border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500;
+  }
+  .table td {
+    @apply border-b border-slate-100 px-3 py-2 align-middle;
+  }
+  .badge,
+  .badge-green,
+  .badge-yellow,
+  .badge-red,
+  .badge-blue,
+  .badge-gray {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-green {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+  .badge-yellow {
+    @apply bg-amber-100 text-amber-700;
+  }
+  .badge-red {
+    @apply bg-red-100 text-red-700;
+  }
+  .badge-blue {
+    @apply bg-blue-100 text-blue-700;
+  }
+  .badge-gray {
+    @apply bg-slate-100 text-slate-600;
+  }
+}
